@@ -3,17 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+        <link rel="stylesheet" href="{{ asset('/css/navbar.css')}}">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        {% block link %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {% block body %}    
+        <header class="header__main">
+            <div class="header__logo">
+               {# <img src="{{url_for('static', filename='images/logo.png')}}" alt="logo"> #}
+            </div>
+
+            <div class="nav-list-container">
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#">Accueil</a></li>
+                        <li class="nav__item"><a href="#">Ajout produit</a></li>
+                        <li class="nav__item"><a href="#">Connexion</a></li>
+                    
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    
+                </nav>
+            </div>
+        </header>
+     
+
+
+
+
+     <footer> 
+        <div class="container-fluid text-center text-md-left">
+	        <div class="row">
+		        <div class="col-md-6 mt-md-0 mt-3">
+		 
+	                <div class="footer-copyright text-center py-3">© © 2020, <a href="">PassionFroid</a> Tous droits reservés. 
+	                </div>
+	            </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+  
+		        <div class="col-md-3 mb-md-0 mb-3">
+		        </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+  
+			        <div class="list__footer">
+		                <ul class="list-unstyled">
+			                <li>
+			                    <p>Politique de confidentialité</p>
+			                </li>
+			                <li>
+			                    <p>Mentions légales</p>
+			                </li>
+			                <li>
+			                    <p>Contact</p>
+			                </li>
+		                </ul>
+		            </div>
+                </div>
+            </div>
+        </div>        
+     </footer> 
+    {% endblock %}
     </body>
 </html>

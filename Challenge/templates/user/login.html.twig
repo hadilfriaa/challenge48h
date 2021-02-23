@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Login {% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{{ asset('/css/login.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<header class="header__main">
+    <div class="header__logo">
+        {# <img src="{{url_for('static', filename='images/logo.png')}}" alt="logo"> #}
+    </div>
+    <div class="nav-list-container">
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{{ path('home') }}">Accueil</a></li>
+                <li class="nav__item"><a href="{{ path('add') }}">Ajout produit</a></li>
+                <li class="nav__item"><a href="{{ path('login') }}">Connexion</a></li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </ul>
+            
+        </nav>
+    </div>
+</header>
+ 
+<div class="container">
+
+   <h1> Connexion </h1>
+    <p class="reserve"> Reservé aux employées</p>
+    <form action="{{ path('login') }}" method="post">  
+        <center>           
+            <div class="mail">
+                <input class="inpt" placeholder="Adresse Mail" required name="_username" type="text" value="">
+            </div>
+
+            <div class="password">
+                <input class="inpt" placeholder="Password" required name="_password" type="password">
+            </div>
+            <div class="container ip p-0">
+                <div class="imp">
+                    <input type="checkbox" checked="checked">
+                        <label class="m-0 mx-2">Memoriser mon compte</label>
+                </div>
+            </div>
+            <div>
+                <button class="confirmation" type="submit">Confirmation</button>
+            </div>
+        </center>
+    </form>
+
+                
+   
+</div>
+
+{% endblock %}
