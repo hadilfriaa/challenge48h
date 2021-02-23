@@ -19,8 +19,8 @@
                 <li class="nav__item"><a href="{{ path('add') }}">Ajout produit</a></li>
                 <li class="nav__item"><a href="{{ path('login') }}">Connexion</a></li>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
             </ul>
             
@@ -39,7 +39,7 @@
             </div>
 
             <div class="password">
-                <input class="inpt" placeholder="Password" required name="_password" type="password">
+                <input class="inpt" placeholder="Mot De Passe" required name="_password" type="password">
             </div>
             <div class="container ip p-0">
                 <div class="imp">
@@ -48,13 +48,43 @@
                 </div>
             </div>
             <div>
-                <button class="confirmation" type="submit">Confirmation</button>
+                <button class="confirmation" type="submit">Connexion</button>
             </div>
         </center>
     </form>
 
-                
-   
 </div>
+
+<footer> 
+        <div class="container-fluid text-center text-md-left mt-5">
+	        <div class="row">
+		        <div class="col-md-6 mt-md-0 mt-3">
+		 
+	                <div class="footer-copyright text-center py-3">© © 2020, <a href=""> PassionFroid</a> Tous droits reservés. 
+	                </div>
+	            </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+  
+		        <div class="col-md-3 mb-md-0 mb-3">
+		        </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+  
+			        <div class="list__footer">
+		                <ul class="list-unstyled">
+			                <li>
+			                    <p>Politique de confidentialité</p>
+			                </li>
+			                <li>
+			                    <p>Mentions légales</p>
+			                </li>
+			                <li>
+			                    <p>Contact</p>
+			                </li>
+		                </ul>
+		            </div>
+                </div>
+            </div>
+        </div>        
+     </footer> 
 
 {% endblock %}

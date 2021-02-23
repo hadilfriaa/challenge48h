@@ -3,7 +3,7 @@
 {% block title %}Hello UserController!{% endblock %}
 
 {% block link %}
-
+    <link rel="stylesheet" href="{{ asset('/css/home.css')}}">
 {% endblock %}
 
 {% block body %}
@@ -17,11 +17,12 @@
                 <li class="nav__item"><a href="{{ path('home') }}">Accueil</a></li>
                 <li class="nav__item"><a href="{{ path('add') }}">Ajout produit</a></li>
                 <li class="nav__item"><a href="{{ path('login') }}">Connexion</a></li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-            </form>
+           
         </nav>
     </div>
 </header>
@@ -31,21 +32,21 @@
     <div class="card mt-5" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Titre</h5>
+        <h5 class="card-title">Nom</h5>
     </div>
     </div>
 
      <div class="card mt-5" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Titre</h5>
+        <h5 class="card-title">Nom</h5>
     </div>
     </div>
 
      <div class="card mt-5" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">Titre</h5>
+        <h5 class="card-title">Nom</h5>
     </div>
     </div>
 

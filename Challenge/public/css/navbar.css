@@ -24,7 +24,7 @@
 }
 
 .header__nav .nav__item {
-
+    font-family: 'Oswald', sans-serif;
     font-size: 20px;
     color: white;
 
@@ -75,10 +75,13 @@ footer{
 }
 footer a{
     color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
 }
 .list__footer{
+    font-family: 'Oswald', sans-serif;
     color: whitesmoke;
 }
 .sf-toolbar{
+    
     padding-top: 100px;
 }
