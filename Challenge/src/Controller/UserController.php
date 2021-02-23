@@ -40,12 +40,16 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      */
     public function home(): Response
     {
+        //$repository = $this->getDoctrine()->getRepository(Produit::class);
+        //$produit = $repository->findAll();
+
         return $this->render('user/home.html.twig', [
             'controller_name' => 'UserController',
+            //'produit' => $produit,
         ]);
     }
 
